@@ -1,0 +1,32 @@
+{
+  "name": "beauxdes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "extension.js",
+  "scripts": {
+    "serve": "webpack --watch",
+    "rollup": "rollup -c",
+    "enable": "gnome-extensions enable beauxdes@corentinlabroche.fr",
+    "watch": "journalctl -f -o cat /usr/bin/gnome-shell",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "dayjs": "^1.10.7",
+    "puppeteer": "^13.0.1",
+    "rollup": "^2.66.1",
+    "webpack": "^5.66.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "babel-loader": "^8.2.3",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

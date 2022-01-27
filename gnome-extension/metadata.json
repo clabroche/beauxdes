@@ -1,0 +1,8 @@
+{
+  "name": "Beaux Dés",
+  "description": "Manage bodet from gnome",
+  "uuid": "beauxdes@corentinlabroche.fr",
+  "shell-version": [
+    "41"
+  ]
+}

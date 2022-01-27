@@ -1,0 +1,19 @@
+{
+  "name": "beauxdes-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "stack-monitor stack.js",
+    "postinstall": "cd front && npm i && cd ../server && npm i",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@iryu54/stack-monitor": "^1.8.5"
+  },
+  "dependencies": {
+    "dotenv": "^14.2.0"
+  }
+}

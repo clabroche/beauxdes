@@ -1,0 +1,5 @@
+node_modules
+server/node_modules
+android
+gnome-extension
+server/puppeteer-cache

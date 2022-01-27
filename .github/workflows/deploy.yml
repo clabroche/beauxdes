@@ -1,0 +1,25 @@
+name: Publish to Registry
+on:    
+  push:
+    tags:
+      - '*'
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        pre: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
+        name: clabroche/docker-registry/beauxdes
+        username: ${{ secrets.DOCKER_HUB_USER }}
+        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+        registry: docker.pkg.github.com
+        tags: "latest,${{ env.STATE_RELEASE_VERSION }}"
+  
